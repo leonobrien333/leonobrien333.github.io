@@ -1,0 +1,590 @@
+ 
+ 
+ /* ==========================================================================
+  COURSE BANNER
+  ========================================================================== */
+
+
+  /* ==========================================================================
+  COURSE DETAILS
+  ========================================================================== */
+
+  .course-details{
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    justify-content: center;
+    row-gap:1.5rem;
+  }
+
+  .course-details .repeater{
+    width: 350px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .course-details .repeater_body{
+    width:100%;
+    height:100%;
+    display: grid;
+    justify-content: stretch;
+    align-content: stretch;
+    grid-template-rows: 2rem;
+  }
+
+  .course-details .repeater_copy{
+    border: var(--border-width) solid var(--white);
+    border-radius: 9999px;
+    padding: 0.7rem 1rem;
+    width: 100%;
+    transition: all var(--transition-duration);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.25;
+  }
+  .course-details .repeater_copy:hover{
+    border-color: var(--blue);
+    background-color: var(--blue);
+    cursor: pointer;
+  }
+
+  .course-details .repeater_copy p{
+    margin:0;
+  }
+
+/* ==========================================================================
+YOU'LL LEARN
+========================================================================== */
+.youll-learn .split-row-copy p::before{
+  content: '>';
+  margin-inline-end: 1em;
+}
+.youll-learn .split-row-copy p{
+  margin-inline-start: 2em;
+  text-indent: -1.6em;
+}
+/* ==========================================================================
+COURSE STATISTICS
+========================================================================== */
+
+.statistics .swiper-slide{
+  height:1px;
+}
+  .statistics{
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-block: var(--section-block-spacing);
+    min-height: 380px;
+  }
+
+  .statistics .container.swiper{
+    max-width: 1000px;
+  }
+
+
+  .statistics.acf-carousel-repeater-parallax{
+    margin-block-start: 0;
+  }
+
+
+  .statistics .repeater{
+    /* min-height:180px; */
+    /* width:100%; */
+    margin-inline:1.5rem;
+
+    width:35px;
+    height:20px;
+
+    /* padding:1rem; */
+    min-width: unset;
+    border: none;
+    /* border-color: var(--white);
+    border-style: solid;
+    border-width: var(--border-width);
+    border-radius:var(--border-radius); */
+    display: flex;
+    /* justify-content: center; */
+    justify-content: flex-start;
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+  }
+  .statistics .repeater:hover{
+    background-color: unset;
+    color:unset;
+    cursor: default;
+  }
+
+  @media screen and (min-width: 768px) {
+    .statistics .swiper-slide .repeater{
+      margin-inline:1rem;
+    }
+    .statistics .swiper-slide:first-child .repeater{
+      margin-inline:0;
+    }
+    .statistics .swiper-slide:last-child .repeater{
+      margin-inline:0;
+    }
+  }
+  .statistics .repeater_header{
+    /* background-color: var(--white); */
+    /* border-radius: 9999px;
+    padding-inline:1.5rem;
+    padding-block: 0.8rem;*/
+    width:fit-content; 
+    margin:auto;
+    font-family: "Mango Grotesque",sans-serif;
+    font-size:4rem;
+    /* font-weight: 900; */
+    letter-spacing: var(--header-font-letter-spacing);
+    /* color: var(--violet); */
+    /* color: var(--white); */
+    transition: all var(--transition-duration);
+  }
+  .statistics .decoration{
+    position: absolute;
+    width:80px;
+    height:80px;
+    left: 50%;
+    transform: translateX(-50%);
+    top:3px;
+    background-color:rgba(48, 79, 158, 1);
+    border-radius: 9999px;
+    background-image: url(../images/stats-dot.png);
+    opacity: 0;
+    transition-delay: 0.8s;
+    transition-duration: 1s;
+    transition-property: opacity;
+    z-index: -1;
+  }
+  .statistics .animated-border .decoration{
+    opacity: 1;
+    /* background-color: rgba(48, 79, 158, 1); */
+  }
+
+  .statistics .repeater_body{
+
+    opacity: 0;
+  }
+  .statistics .repeater_copy{
+    border-radius: 9999px;
+    /* padding-block-start:1rem; */
+    padding-inline: 1rem;
+    margin: auto;
+    max-width: 220px;
+    text-align: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight:400;
+    font-family: "Helvetica Neue Lt Std 93 Black Extended", sans-serif;
+  }
+  .statistics .repeater:hover .repeater_header,
+  .statistics .swiper-slide:hover .repeater_header
+  {
+    /* background-color: var(--violet);
+    color:var(--white); */
+  }
+
+  .animated-border {
+    position: relative;
+    padding-block-start:1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background:transparent;
+
+    border:var(--border-width) solid var(--white);
+    border-radius: 9999px;
+
+    animation-duration: 1s;
+    animation-name: animated-border;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes animated-border {
+    from{
+      width:35px;
+      height:20px;
+      border-radius: 9999px;
+    }
+    50% {
+      width:35px;
+      height:20px;
+    }
+    80% {
+      width: 100%;
+      height:20px;
+    }
+    90% {
+      border-radius: 20px;
+    }
+    to {
+      border-radius: 20px;
+      width:100%;
+      height:180px;
+    }
+  }
+  /* @keyframes animated-border {
+    from{
+      max-width:20px;
+      max-height:20px;
+      min-height:20px;
+      border-radius: 9999px;
+    }
+    50% {
+      max-width:20px;
+      max-height:20px;
+      min-height:20px;
+    }
+    80% {
+      max-width: 100%;
+      max-height:20px;
+    }
+    90% {
+      border-radius: 20px;
+    }
+    to {
+      border-radius: 20px;
+      max-width:100%;
+      max-height:100%;
+    }
+  } */
+
+  .animated-border .repeater_body {
+    position: relative;
+    opacity:0;
+    padding-inline: 1rem;
+    margin-inline: 2rem;
+
+    animation-duration: 300ms;
+    animation-name: banner-text;
+    animation-delay: 780ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes banner-text {
+    from{
+      opacity:0;
+      transform: translateY(15%);
+    }
+    to{
+      opacity:1;
+      transform: translateY(-0%);
+    }
+  }
+
+  /* ==========================================================================
+COURSE ADDITIONAL INFO
+========================================================================== */
+
+.additional-info-actual{
+  margin-inline: auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding-block-start: var(--section-block-spacing); */
+  max-width: var(--component-max-width-narrow);
+}
+.additional-info-actual .repeater{
+  margin-block-start: var(--section-block-spacing);
+}
+.additional-info-actual .repeater:first-of-type{
+  margin-block-start: calc(var(--section-block-spacing)/2);
+}
+.music .additional-info-actual .repeater::after{
+  padding-block:var(--row-gap);
+}
+.additional-info-actual .repeater_body{
+  display:flex;
+  flex-direction: column;
+  /* align-items: center; */
+  align-items: flex-start;
+  width:100%;
+}
+.additional-info-actual .repeater_copy{
+  text-align: left;
+}
+.additional-info-actual .icon{
+  height: var(--icon-lg);
+  width: var(--icon-lg);
+  /* margin-block: calc(var(--section-block-spacing) / 2); */
+  margin-block: calc(var(--section-block-spacing));
+  margin-inline: auto;
+}
+.additional-info-actual h3{
+  text-align: left;
+  width:100%;
+  padding-inline-end: 1em;
+  border-bottom: 1px solid var(--white);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+FEES AND FUNDING
+========================================================================== */
+.fees-and-funding-outer-container{
+    margin-block-end: var(--section-block-spacing);
+    margin-block-start: calc((var(--section-block-spacing)/2) * -1);
+  }
+  .fees-and-funding-outer-container .section-header{
+    max-width: var(--component-max-width-narrow);
+    margin:auto;
+    margin-block-start: var(--section-block-spacing);
+    }
+  .fees-and-funding-outer-container h3{
+    text-align:left;
+    border-bottom:1px solid var(--white);
+    }
+  .fees-and-funding .repeater_header{
+    border-bottom:none;
+    width:50%;
+    text-align: left;
+    font-family: "Helvetica Neue Lt Std 95 Black","Helvetica Neue";
+    }
+.fees-and-funding{
+    max-width:var(--component-max-width-narrow);
+    /* margin-block: 3rem; */
+    margin-block: 1rem;
+    margin-inline: auto;
+    /* padding-inline: 1rem; */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap:1rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+
+  .fees-and-funding .repeater{
+    width:100%;
+  }
+  @media screen and (min-width: 768px) {
+    .fees-and-funding{
+      padding-inline: none;
+    }
+    /* .fees-and-funding .repeater{
+      width:50%;
+    } */
+  }
+  .fees-and-funding .repeater_body{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid var(--white);
+  }
+  /* .fees-and-funding .repeater_copy{
+    border: var(--border-width) solid var(--white);
+    border-radius: 9999px;
+    padding:0.6rem;
+    width:100%;
+    transition: all var(--transition-duration);
+    text-align: center;
+  } */
+  .fees-and-funding .repeater_copy{
+    text-align: left;
+    width:50%;
+  }
+  /* .fees-and-funding .repeater_copy:hover{
+    border-color: var(--violet);
+    background-color: var(--violet);
+    cursor: pointer;
+  } */
+  .fees-and-funding .repeater_copy p{
+    margin:0;
+  }
+
+  /* ==========================================================================
+COURSE PARTNERS
+========================================================================== */
+.partners-outer-container{
+  min-height: 400px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.partners{
+  max-width:var(--component-max-width-narrow);
+  margin-inline: auto;
+  display: grid;
+  --repeater-min-width: 180px;
+  grid-template-columns: repeat( auto-fit, minmax(var(--repeater-min-width), calc(100%/5)) );
+  gap:1rem;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.partners .repeater{
+  max-width:200px;
+  min-width: var(--repeater-min-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 33%;
+}
+.partners .repeater-header{
+  display:none;
+}
+.partners .repeater-image{
+  width:100%;
+}
+.partners .repeater-image img{
+  width:100%;
+  object-fit: contain;
+  object-position: top center;
+}
+
+  /* ==========================================================================
+MODULES
+========================================================================== */
+/* .modules-outer-container{
+  padding-block:calc(var(--section-block-spacing) / 2);
+} */
+.modules{
+  max-width:var(--component-max-width-narrow);
+}
+.modules img{
+  height:230px;
+  object-fit: cover;
+  object-position: ce;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.modules .fl_accordion-button.collapsed {
+  opacity: unset;
+}
+.modules .fl_accordion-button.collapsed:hover {
+  background: var(--violet);
+}
+.modules .fl_accordion-header, .modules h3.fl_accordion-header{
+  font-size: 0.8rem;
+}
+.modules h3.fl_accordion-header [aria-expanded="true"]{
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+  /* ==========================================================================
+PROGRESSION
+========================================================================== */
+.progression-routes-outer-container{
+  background: var(--violet);
+}
+.progression-routes{
+  max-width:var(--component-max-width-narrow);
+  --accordion-radius: 38px;
+}
+.progression-routes img{
+  height:230px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom-left-radius: var(--accordion-radius);
+  border-bottom-right-radius: var(--accordion-radius);
+  margin-top:1rem;
+}
+.progression-routes .fl_accordion-button {
+  text-align: left;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.progression-routes .fl_accordion-body{
+  border-bottom-left-radius: var(--accordion-radius);
+  border-bottom-right-radius: var(--accordion-radius);
+}
+.progression-content{
+  padding-inline: 2.2rem;
+}
+.progression-routes .fl_accordion-body p{
+  margin-block: unset;
+  padding-block-end:1rem;
+  text-align: left;
+}
+.progression-routes .fl_accordion-button.collapsed {
+  opacity: unset;
+  border-radius: var(--accordion-radius);
+}
+.progression-routes .fl_accordion-header{
+  text-align: left;
+  border-radius: var(--accordion-radius);
+  /* transition: border-bottom-left-radius 0.01s, border-bottom-right-radius 0.01s; */
+}
+.progression-routes .fl_accordion-header .progression-subheading{
+  font-size:0.8rem;
+  font-weight: 100;
+}
+
+.progression-routes h3.fl_accordion-header [aria-expanded="true"]{
+  padding-block:1.1rem;
+  border-top-left-radius: var(--accordion-radius);
+  border-top-right-radius: var(--accordion-radius);
+  /* transition: border-bottom-left-radius 0.01s, border-bottom-right-radius 0.01s; */
+}
+
+.progression-routes .fl_accordion-collapse{
+  margin-top:-36px;
+  padding-top:36px;
+  background-color: var(--black);
+  border-bottom-left-radius: var(--accordion-radius);
+  border-bottom-right-radius: var(--accordion-radius);
+}
+/* .progression-routes .fl_accordion-collapse.show{
+  margin-top:0px;
+} */
+.progression-routes .education-type-apprenticeships .fl_accordion-collapse {
+  background-color: var(--gray);
+}
+.progression-routes .education-type-courses .fl_accordion-button.collapsed {
+  border-color: var(--black);
+  background-color: var(--black);
+}
+.progression-routes .education-type-courses h3.fl_accordion-header{
+  border-bottom-left-radius: var(--accordion-radius);
+  border-bottom-right-radius: var(--accordion-radius);
+}
+.progression-routes .education-type-courses h3.fl_accordion-header [aria-expanded="true"]{
+  border-color: var(--black);
+  background-color: var(--black);
+  border-bottom-left-radius: var(--accordion-radius);
+  border-bottom-right-radius: var(--accordion-radius);
+}
+.progression-routes .education-type-courses .fl_accordion-body {
+  background: var(--black);
+}
+.progression-routes .education-type-apprenticeships .fl_accordion-button.collapsed {
+  border-color: var(--gray);
+  background-color: var(--gray);
+}
+.progression-routes .education-type-apprenticeships h3.fl_accordion-header [aria-expanded="true"]{
+  border-color: var(--gray);
+  background-color: var(--gray);
+}
+.progression-routes .education-type-apprenticeships .fl_accordion-body {
+  background: var(--gray);
+}
+
+.st0{
+  fill:none;
+  stroke-width:2;
+  stroke:#4B4B4A;
+}
+.education-type-apprenticeships .st0{
+  stroke:#D1D1D1;
+}
+
+
+.progression-details{
+  text-align: left;
+  padding-block-end:1rem;
+}

@@ -1,0 +1,29 @@
+.page-term-dates.fl_accordion-button.collapsed {
+  opacity: 0.2;
+}
+
+.year {
+  display: grid;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.term-details {
+  display: grid;
+}
+
+.term-details div:first-child {
+  font-family: var(--header-font);
+  letter-spacing: var(--header-font-letter-spacing);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.term-header {
+  text-transform: uppercase;
+  color: var(--cyan);
+}
+
+.term-details div:last-child {
+  display: grid;
+}

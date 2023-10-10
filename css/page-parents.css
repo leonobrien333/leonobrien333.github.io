@@ -1,0 +1,33 @@
+/* PAGE PARENTS */
+.success-stories h2{
+    /* margin-block-end: 0; */
+    margin-bottom: 10px;
+}
+
+.ofsted{
+    font-family: var(--owners-font);
+    text-align: center;
+    margin: auto;
+    letter-spacing: var(--owners-font-letter-spacing);
+}
+.ofsted.acf-simple-wysiwyg {
+    max-width: 25rem;
+}
+.simple-accordion .fl_accordion-item {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.fl_accordion-body p {
+    line-height: 1.2;
+}
+.component.piece-of-mind{
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+}
+@media only screen and (max-width:767px){
+	.section-break-copy img{
+		max-width: 200px;
+		width: 100%;
+	}
+}

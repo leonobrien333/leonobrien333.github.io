@@ -1,0 +1,78 @@
+:root {
+	/* fonts */
+	  --owners-font: 'owners-wide', sans-serif;
+    --owners-black-weight: 800;
+    --owners-black-xweight: 900;
+    --lead-font-size: 2rem;
+    --owners-font-letter-spacing: 0.05em;
+
+	  --header-font: "Helvetica Neue Lt Std 93 Black Extended", sans-serif;
+    --header-black-weight: 800;
+    --header-black-xweight: 900;
+    --header-font-letter-spacing: 0.05em;
+
+    --max-copy-width: 60ch;
+
+    --bs-font-sans-serif: "Helvetica Neue",system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    
+    /* buttons */
+    --btn-border-width: 3px;
+  
+    /* spacing */
+    --border-width: 3px;
+    --border-radius: 10px;
+    --section-block-spacing: 5rem;
+    --row-gap:3rem;
+
+    /* additional container widths */
+    /* --component-max-width-narrow: 800px; */
+    --banner-max-width: 800px;
+    --component-max-width-narrow: 710px;
+  
+    /* icons */
+    --icon-size: 20px;
+    --icon-lg: 40px;
+    --computing-icon-url: url('../images/icon-computing.svg');
+    --computing-icon-url: url('../images/PathwayIcons_Computing.png');
+    --esports-icon-url: url('../images/PathwayIcons_Esports.png');
+    --games-icon-url: url('../images/PathwayIcons_Games.png');
+    --media-icon-url: url('../images/PathwayIcons_Media.png');
+    --music-icon-url: url('../images/PathwayIcons_Music.png');
+    --events-icon-url: url('../images/PathwayIcons_Events.png');
+    --music-icon-url: url('../images/PathwayIcons_Music.png');
+    --apprenticeships-icon-url: url('../images/PathwayIcons_Apprenticeships.png');
+    --access-to-he-icon-url: url('../images/PathwayIcons_AccessToHe.png');
+
+    /* backgrounds */
+    --background-blue-url: url('../images/Background-Blue-Texture.jpg');
+    --background-green-url: url('../images/Background-Green-Texture.jpg');
+    --background-purple-url: url('../images/Background-Purple-Texture.jpg');
+    --background-turq-url: url('../images/Background-Turq-Texture.jpg');
+    --background-partners: url('../images/Background-Partners.jpg');
+
+    /* transitions */
+    --transition-duration: 0.3s;
+  
+    /* colours */
+    --white: #ffffff;
+    --black: #000000;
+    --violet: #9936ff;
+    --violet-rgb: 152,54,255;
+    --blue: #2619FF;
+    --cyan: #1CFFE5;
+    --yellow: #DBFF00;
+    --gray: #706f6f;
+    /* colours assigned to subjects */
+    --pathway-color-music: var(--violet);
+    --pathway-color-games: var(--blue);
+    --pathway-color-media: var(--cyan);
+    --pathway-color-computing: var(--blue);
+    --pathway-color-esports: var(--violet);
+    --pathway-color-events: var(--cyan);
+    --pathway-color-19-plus: var(--violet);
+
+
+    /* Swiper JS */
+    --swiper-navigation-size: 30px;
+    --swiper-navigation-color: var(--black);
+  }

@@ -1,0 +1,146 @@
+/* ==========================================================================
+PATHWAYS
+========================================================================== */
+.pathways .split-row:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.pathways .heading {
+  position: relative;
+  font-weight: 700;
+  text-transform: uppercase;
+font-family: var(--owners-font);
+font-weight: var(--owners-black-weight);
+font-weight: 700;
+font-size: 1.8em;
+}
+
+.pathways .copy, .pathways .split-row-copy .copy{
+  font-size: .85em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* .pathways .btn{
+    color:white;
+    border:1px solid white;
+    border-radius: var(--border-radius);
+  } */
+.pathways-template-default .section-header {
+  margin-top: 130px;
+}
+.pathways-template-default .what-can-you-be-outer-container .section-header {
+  margin-top: 70px;
+}
+.pathways-template-default .repeater_body{
+	width: 90%;
+		/* font-family: var(--header-font); */
+}
+.pathways-template-default .repeater_copy p{
+	text-align: center;
+	line-height: 1.2;
+	font-size: 0.85rem;
+
+}
+/* ==========================================================================
+IS THIS FOR YOU?
+========================================================================== */
+.is-it-for-you .repeater {
+  padding-inline: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .is-it-for-you .repeater {
+    padding-inline: unset;
+  }
+}
+
+.is-it-for-you .repeater_body {
+  border: 4px solid white;
+  border-radius: 10px;
+  /* width:360px; */
+  height: 350px;
+}
+
+.is-it-for-you .repeater_copy {
+  padding: 1rem;
+}
+
+.is-it-for-you .repeater_image {
+  height: 200px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+/* .swiper-what-can-you-be-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* ==========================================================================
+  WHAT CAN YOU BE?
+  ========================================================================== */
+.what-can-you-be-outer-container{
+	margin-bottom: 100px;
+}
+.what-can-you-be .repeater {
+  padding-inline: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .what-can-you-be .repeater {
+    padding-inline: unset;
+  }
+}
+
+.what-can-you-be .repeater_body {
+  border: 4px solid white;
+  border-radius: 10px;
+  /* width:360px; */
+  height: 350px;
+}
+
+.what-can-you-be .repeater_copy {
+  padding: 1rem;
+  font-family: var(--header-font);
+}
+
+.what-can-you-be .repeater_image {
+  height: 200px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+.repeater_image.repeater-image-top img{
+	width: 100%;
+	height: auto;
+}
+.postid-532 .what-can-you-be-outer-container{
+	display: none;
+}
+.postid-532 .is-it-for-you-outer-container{
+	padding-bottom: 50px !important;
+}
+
+/* ==========================================================================
+    QUOTES
+    ========================================================================== */
+.quote-container {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+.pathways-template-default .quote-container .repeater_copy p{
+	text-align: center;
+	font-family: var(--header-font);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: var(--header-font-letter-spacing);
+}

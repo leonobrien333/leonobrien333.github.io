@@ -1,0 +1,62 @@
+/* ==========================================================================
+RELATIONSHIP LIST COMPONENT
+========================================================================== */
+.relationship-grid-outer-container{
+  padding-block: var(--section-block-spacing);
+}
+.relationship-grid{
+    --border-radius:1rem;
+    /* margin-block: var(--section-block-spacing); */
+    margin-inline: auto;
+    display: grid;
+    gap:1rem;
+    row-gap:1rem;
+    align-items: start;
+    justify-items: center;
+    grid-template-columns:  repeat(auto-fill, minmax(300px, 1fr));
+  }
+  @media (min-width:768px){
+    .relationship-grid{
+      grid-template-columns:  repeat(3, minmax(300px, 1fr));
+    }
+  }
+
+  .relationship-grid .repeater{
+    border: var(--border-width) solid white;
+    max-width: unset;
+    padding: 2rem;
+    height:100%;
+    border-radius: var(--border-radius);
+  }
+  .relationship-grid .repeater-header{
+    margin-block:1em;
+  }
+  .relationship-grid .repeater-image{
+    width:100%;
+    aspect-ratio: 2/1;
+    display: flex;
+    align-items: center;
+    margin-bottom:1rem;
+  }
+  .relationship-grid .repeater-copy{
+    text-align: center;
+  }
+  .relationship-grid .repeater-image img{
+    width:100%;
+    object-fit: contain;
+    object-position: top center;
+    border-radius: calc(var(--border-radius) / 2);
+  }
+
+  .relationship-grid .repeater {
+    transform: translateY(50px);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+  }
+
+  .relationship-grid .in-view {
+    transform: none;
+    opacity: 1;
+}

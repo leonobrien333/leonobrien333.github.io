@@ -1,0 +1,8 @@
+.page-maths-and-english .course-details .repeater_copy {
+    border-color: var(--yellow);
+}
+
+.page-maths-and-english .campus-list a {
+    color: var(--yellow);
+    background: var(--blue);
+}

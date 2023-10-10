@@ -1,0 +1,36 @@
+/* ==========================================================================
+ICONS
+========================================================================== */
+.icon{
+    height: var(--icon-size);
+    width: var(--icon-size);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block; 
+  }
+
+  .computing-icon, .pathway-computing .icon {
+    background-image: var(--computing-icon-url);
+  }
+  .esports-icon, .esport-icon, .pathway-esports .icon{
+    background-image: var(--esports-icon-url);
+  }
+  .games-icon, .pathway-games .icon{
+    background-image: var(--games-icon-url);
+  }
+  .media-icon, .pathway-media .icon{
+    background-image: var(--media-icon-url);
+  }
+  .music-icon, .pathway-music .icon{
+    background-image: var(--music-icon-url);
+  }
+  .events-icon, .pathway-events .icon{
+    background-image: var(--events-icon-url);
+  }
+  .apprenticeships-icon, .pathway-apprenticeships .icon{
+    background-image: var(--apprenticeships-icon-url);
+  }
+  .access-to-he-icon, .pathway-access-to-he .icon{
+    background-image: var(--access-to-he-icon-url);
+  }

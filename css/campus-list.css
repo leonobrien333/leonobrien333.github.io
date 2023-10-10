@@ -1,0 +1,523 @@
+/* ==========================================================================
+CAMPUS LIST
+========================================================================== */
+.campus-list-outer-container h2 {
+    margin-block-end: 0;
+    font-size: 1.1rem;
+}
+
+.campus-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    justify-content: center;
+    gap: 1rem;
+    padding-block-end: var(--section-block-spacing);
+    font-family: var(--header-font);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: var(--header-font-letter-spacing);
+    padding-bottom: 30px;
+}
+
+.campus-list ul {
+    border: unset;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-block: 1rem;
+    list-style: none;
+    padding-inline: 0;
+}
+
+@media (min-width: 768px) {
+    .campus-list ul {
+        padding-inline: 2rem;
+    }
+}
+
+.campus-list a {
+    display: block;
+    width: 100%;
+    min-width: 155px;
+    border-radius: 9999px;
+    color: white;
+    background: var(--violet);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all var(--transition-duration);
+    font-size: 0.8rem;
+}
+
+.campus-list a:hover {
+    color: var(--violet);
+    background: white;
+}
+
+
+/* ==========================================================================
+CAMPUS LIST SLIDER
+========================================================================== */
+
+.campus-carousel{
+    --campus-carousel-height:530px;
+}
+@media (min-width: 768px){
+    .campus-carousel{
+        --campus-carousel-height:450px;
+    }
+}
+
+.campus-carousel{
+    position: relative;
+    height:var(--campus-carousel-height);
+}
+.campus-slider-nav {
+    position: relative;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    z-index:2;
+  }
+  .campus-slider-nav .swiper-slide{
+    border-radius: 9999px;
+  }
+  .campus-slider-nav .btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-width: 155px;
+      margin-inline: 3rem;
+      color: white;
+      background-color: transparent;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      border:var(--border-width) solid transparent;
+      border-radius: 9999px;
+      transition: all var(--transition-duration);
+    }
+    @media (min-width: 768px){
+        .campus-slider-nav .btn{
+            margin-inline: unset;
+        }
+    }
+    .campus-slider-nav .btn:hover,
+    .campus-slider-nav button:hover {
+        color: var(--violet);
+        background: white;
+    }
+.campus-slider-nav .swiper-slide-active .btn {
+    background-color: var(--violet);
+}
+@media (min-width: 768px){
+    .campus-slider-nav .swiper-slide-active .btn {
+        background-color: transparent;
+    }
+    .campus-slider-nav .btn.active {
+        background-color: var(--violet);
+    }
+}
+
+.campus-slider-nav .btn:hover,
+.campus-slider-nav button:hover {
+    color: var(--violet);
+    background: white;
+}
+
+  .campus-slider-nav .swiper-button-next,
+  .campus-slider-nav .swiper-rtl .swiper-button-prev {
+    top: 50%;
+  }
+  .campus-slider-nav .swiper-button-prev,
+  .campus-slider-nav .swiper-rtl .swiper-button-next {
+    top: 50%;
+  }
+
+.campus-slider-outer-container h2 {
+    margin-block-end: 0;
+}
+
+.campus-slider {
+    position:absolute;
+    height:var(--campus-carousel-height);
+    inset:0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    justify-content: center;
+    gap: 1rem;
+    /* padding-block-end: var(--section-block-spacing); */
+    padding-inline: 0;
+}
+
+
+.campus-slider .swiper-slide {
+    padding-block-start: 2rem;
+}
+.campus-slider .animate-body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+.campus-slider .animate-header{
+    font-family: var(--header-font);
+    letter-spacing: var(--header-font-letter-spacing);
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height:0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.campus-slider .summary{
+    font-family: var(--bs-body-font-family);
+    text-transform: none;
+    text-align: center;
+    margin-block-end: 0.5rem;
+    /* line-height: 1.1em; */
+    /* font-weight: normal; */
+    /* font-size: 0.9rem; */
+}
+.campus-slider .see-more{
+    display: flex;
+    justify-content: flex-start;
+    /* text-transform: uppercase; */
+}
+.campus-slider a.see-more{
+    margin:auto;
+    text-decoration-color: rgba(219, 255, 0, 1);
+    /* line-height: 0;
+    margin-top: 0.5em;
+    margin-bottom: 1em; */
+    transition: color var(--transition-duration), text-decoration-color var(--transition-duration);
+    /* color:var(--white); */
+}
+.campus-slider a.see-more:hover{
+    color:var(--white);
+    text-decoration-color: rgba(219, 255, 0, 0);
+}
+/* 
+.campus-slider a.see-more:after{
+    content : "";
+    display: inline-block;
+    width:30px;
+    height:30px;
+    margin-inline-start: 1rem;
+    margin-block-start: -0.35em;
+    background : url(../images/icons/access-creative-logo-icon.png) no-repeat;
+    background-size: cover;
+    transform:translateX(0px);
+    transition: transform;
+    transition-duration: var(--transition-duration);
+    transition-timing-function: ease-in-out;
+}
+
+.campus-slider a.see-more:hover:after{
+    transform:translateX(5px);
+} */
+
+/*
+DEL
+Not requred since update to campus slider navigation
+*/
+/* .campus-slider button:not(.wiper-pagination-bullet-active) {
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .campus-slider ul {
+        padding-inline: 2rem;
+    }
+} */
+
+
+/* .campus-slider .btn.swiper-pagination-bullet-active {
+    background-color: var(--violet);
+} */
+
+
+/* .campus-slider .swiper-pagination {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    height: fit-content;
+} */
+
+/* .campus-slider .swiper-pagination-bullet {
+    margin: 0 !important;
+    min-width: fit-content;
+} */
+
+.animate-surround {
+    position: relative;
+    width: 100%;
+    max-width: var(--component-max-width-narrow);
+    height: 360px;
+    margin-inline: auto;
+    margin-block: 1rem;
+    display: flex;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: -1;
+}
+@media (max-width: 991px) {
+	.animate-surround {
+        position: relative;
+        width: 85%;
+    }
+}
+@media (max-width: 475px) {
+	.animate-surround {
+        height: 530px;
+    }
+}
+
+
+
+.campus-slider .swiper-slide-active .animate-body_icon {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+    width: 20px;
+    height: 20px;
+
+    padding-inline-start: 2px;
+
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+
+    animation-duration: 1500ms;
+    animation-name: campuses-banner-icon;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes campuses-banner-icon {
+    from{
+      opacity:1;
+    }
+    29%{
+      opacity:1;
+    }
+    30%{
+      opacity:0;
+    }
+    39%{
+      opacity:0;
+    }
+    40%{
+      opacity:1;
+    }
+    49%{
+      opacity:1;
+    }
+    50%{
+      opacity:0;
+    }
+    to{
+      opacity:0;
+    }
+  }
+
+.campus-slider .animated-border .animate-body_icon svg,
+.campus-slider .animated-border .animate-body_icon img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    fill: var(--white);
+}
+
+.animate-header {
+    margin: 0.3em 0 0;
+}
+
+
+.campus-slider .animated-border .animate-body {
+    position: relative;
+    opacity: 0;
+    padding-inline: 1rem;
+    margin-inline: 2rem;
+}
+
+.campus-slider .swiper-slide-active .animated-border {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-block-start: 0;
+
+    background: transparent;
+
+    border: var(--border-width) solid var(--white);
+    border-radius: 9999px;
+
+    /* width:fit-content; */
+    max-width: 900px;
+    width: 100%;
+    /*
+    have to use max-height hack to have smooth height transition.
+    https://css-tricks.com/using-css-transitions-auto-dimensions/
+    */
+    /* height:fit-content; */
+    height: 75%;
+    max-height: 800px;
+
+    animation-duration: 1s;
+    animation-name: banner-animated-border-in;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.campus-slider .swiper-slide-active .animated-border .animate-body {
+    position: relative;
+    opacity: 0;
+    padding-inline: 1rem;
+    margin-inline: 2rem;
+    animation-duration: 300ms;
+    animation-name: animate-text;
+    animation-delay: 780ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.campus-slider .animated-border {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: transparent;
+
+    border: var(--border-width) solid var(--white);
+    border-radius: 9999px;
+
+    /* width:fit-content; */
+    max-width: 900px;
+    width: 100%;
+    /*
+    have to use max-height hack to have smooth height transition.
+    https://css-tricks.com/using-css-transitions-auto-dimensions/
+    */
+    /* height:fit-content; */
+    height: 100%;
+    max-height: 800px;
+
+    animation-duration: 80ms;
+    animation-name: banner-animated-border-out;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+/* .campus-slider .animated-border.first-time-only{
+    animation-name: banner-animated-border-in-once;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+} */
+
+@keyframes animate-text {
+    from {
+        opacity: 0;
+        transform: translateY(15%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(-0%);
+    }
+}
+
+/*
+  have to use max-height hack to have smooth height transition.
+  https://css-tricks.com/using-css-transitions-auto-dimensions/
+  */
+/* @keyframes banner-animated-border-in-once {
+    from {
+        max-width: 40px;
+        max-height: 40px;
+        border-radius: 9999px;
+    }
+    50% {
+        max-width: 40px;
+        max-height: 40px;
+    }
+    80% {
+        max-width: 100%;
+        max-height: 40px;
+        border-radius: 20px;
+    }
+    to {
+        border-radius: 20px;
+        max-width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+    }
+} */
+@keyframes banner-animated-border-in {
+    from {
+        max-width: 40px;
+        max-height: 40px;
+        border-radius: 9999px;
+    }
+    50% {
+        max-width: 40px;
+        max-height: 40px;
+    }
+    80% {
+        max-width: 100%;
+        max-height: 40px;
+        border-radius: 20px;
+    }
+    to {
+        border-radius: 20px;
+        max-width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+@keyframes banner-animated-border-out {
+    from {
+        border-radius: 20px;
+        max-width: 100%;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    50% {
+        max-width: 100%;
+        max-height: 40px;
+        border-radius: 20px;
+    }
+    80% {
+        max-width: 40px;
+        max-height: 40px;
+    }
+    to {
+        max-width: 40px;
+        max-height: 40px;
+        border-radius: 9999px;
+    }
+}

@@ -1,0 +1,61 @@
+.acf-simple-link-repeater{
+    width:fit-content;
+    margin:auto;
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:0.5rem;
+}
+.acf-simple-link-repeater a.btn {
+    margin-block: 0;
+    min-width: 30ch;
+    text-transform: none;
+    padding: 0.8rem;
+}
+
+/* ==========================================================================
+  GOOD TO KNOW
+  ========================================================================== */
+  .good-to-know .repeater {
+    padding-inline: 1.8rem;
+  }
+  
+  @media (min-width: 768px) {
+    .good-to-know .repeater {
+      padding-inline: unset;
+    }
+  }
+  
+  .good-to-know .repeater_body {
+    border: 4px solid white;
+    border-radius: 10px;
+    /* width: 360px; */
+    height: 400px;
+    width: 97%;
+  }
+  
+  .good-to-know .repeater_copy {
+    padding: 1rem;
+  }
+  
+  .good-to-know .repeater_image {
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+
+.case-study-outer-container, .case-study{
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.case-study{
+    text-align:center;
+  }
+.case-study .case-study-copy{
+    color: var(--blue);
+    margin: 30px 0;
+}

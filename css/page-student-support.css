@@ -1,0 +1,35 @@
+.student-support #secondaryTab{
+    margin-inline: -1.5rem;
+}
+.student-support .swiper-container.swiper-tab-secondary-nav{
+    border-radius: 0;
+    width:100%;
+}
+.student-support .swiper-tab-secondary-nav .btn{
+    border:none;
+    border-radius: 0px;
+}
+.student-support .swiper-tab-secondary-nav .nav-link{
+    padding:0;
+    margin-inline:0;
+}
+.student-support .swiper-tab-secondary-nav .swiper-slide::after{
+    position: absolute;
+    right:-2px;
+    content:'';
+    background-color: var(--white);
+    width:2px;
+    height:1rem;
+}
+.student-support .swiper-tab-secondary-nav .swiper-slide:last-child::after{
+    all:unset;
+}
+.student-support .swiper-tab-secondary-nav .nav-link:hover{
+    background-color: transparent;
+    color: var(--yellow);
+}
+.student-support .swiper-tab-secondary-nav .nav-link.active{
+    background-color: transparent;
+    color: var(--yellow);
+    border: none;
+}

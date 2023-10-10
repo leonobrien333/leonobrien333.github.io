@@ -1,0 +1,332 @@
+/* ==========================================================================
+ACCORDION
+========================================================================== */
+.fl_accordion {
+  --line-color: var(--violet-rgb);
+  --border-radius:30px;
+}
+.fl_accordion h2{
+  font-family: "Helvetica Neue Lt Std 95 Black","Helvetica Neue LT Std","Helvetica",Arial,system-ui,-apple-system,sans-serif;
+}
+
+.fl_accordion-item {
+  position:relative;
+  background: none;
+  overflow: hidden;
+  padding-bottom: 0;
+  /* border-radius: var(--border-radius); */
+  position: relative;
+}
+.fl_accordion-item::after {
+  background: linear-gradient(90deg, rgba(var(--line-color),0) 0px, rgba(var(--line-color),1) 0px, rgba(var(--line-color),1) 3px, rgba(var(--line-color),0) 3px);
+  background-position: 100% 0;
+  background-repeat: repeat-y;
+  background-size: 50%;
+  height: 25px;
+  display: block;
+  content: '';
+  bottom: 0px;
+}
+.fl_accordion-item:last-child::after {
+  all:unset;
+}
+.fl_accordion-body p{
+  margin-block:1rem;
+}
+.fl_accordion-button {
+  font-family: "Helvetica Neue Lt Std 95 Black","Helvetica Neue LT Std","Helvetica",Arial,system-ui,-apple-system,sans-serif;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  color:white;
+  box-shadow:none;
+  text-align: center;
+  background-color: transparent;
+  border-color: var(--violet);
+  border-width: var(--border-width);
+  border-radius: var(--border-radius);
+  border-style: solid;
+  padding-block: 1em;
+  transition: all 200ms;
+  z-index: 2;
+}
+.fl_accordion-button[aria-expanded="true"]{
+  background-color: var(--violet);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-block: 2rem;
+}
+.fl_accordion-header, h3.fl_accordion-header{
+  margin-bottom: 0;
+  margin-block-end: 0;
+}
+
+.fl_accordion-body {
+  position: relative;
+  z-index:1;
+  padding: 0;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+.fl_accordion-body img{
+  position: relative;
+  margin-bottom:0px;
+}
+/* .fl_accordion-button::after {
+  content:none;
+  background-color: var(--violet);
+  height:20px;
+} */
+/* 
+ACCORDION PAGE TEMPLATE
+*/
+.page-template-accordion-page-template .accordion{
+  padding-block: var(--section-block-spacing);
+  max-width: var(--component-max-width-narrow);
+}
+.page-template-accordion-page-template .fl_accordion-item {
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-inline: 1rem;
+  border-top: 1px solid var(--white);
+  transition: padding-top var(--transition-duration) linear, padding-bottom var(--transition-duration) linear;
+}
+.page-template-accordion-page-template .fl_accordion-button[aria-expanded="true"] {
+  background-color: transparent;
+  padding: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.page-template-accordion-page-template .fl_accordion-button {
+  padding: 0;
+  text-align: left;
+  border: none;
+}
+.page-template-accordion-page-template .fl_accordion-button {
+  display: flex;
+  justify-content: space-between;
+}
+.page-template-accordion-page-template .fl_accordion-body {
+  text-align: left;
+}
+.page-template-accordion-page-template .fl_accordion-item::after {
+  all:unset;
+}
+.page-template-accordion-page-template  .fl_accordion-button[aria-expanded="true"] .accordion_icon {
+  transform: rotate(90deg);
+}
+.page-template-accordion-page-template  .fl_accordion-button .accordion_icon {
+  transition: transform var(--transition-duration) linear;
+}
+/* 
+ACCORDIONS REPEATER PAGE TEMPLATE
+*/
+.page-template-accordion-page-repeater-template .accordion{
+  padding-block: var(--section-block-spacing);
+  max-width: var(--component-max-width-narrow);
+}
+.page-template-accordion-page-repeater-template .fl_accordion-item {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* padding-inline: 1rem; */
+  border-bottom: 1px solid var(--white);
+  transition: padding-top var(--transition-duration) linear, padding-bottom var(--transition-duration) linear;
+}
+.page-template-accordion-page-repeater-template .fl_accordion-item:first-of-type {
+  border-top: 1px solid var(--white);
+}
+.page-template-accordion-page-repeater-template .fl_accordion-button[aria-expanded="true"] {
+  background-color: transparent;
+  padding: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.page-template-accordion-page-repeater-template .fl_accordion-button {
+  padding: 0;
+  text-align: left;
+  border: none;
+}
+.page-template-accordion-page-repeater-template .fl_accordion-button {
+  display: flex;
+  justify-content: space-between;
+}
+.page-template-accordion-page-repeater-template .fl_accordion-body {
+  text-align: left;
+}
+.page-template-accordion-page-repeater-template .fl_accordion-body p:last-child{
+  margin-block-end: 0.5rem;
+}
+.page-template-accordion-page-repeater-template .fl_accordion-item::after {
+  all:unset;
+}
+.page-template-accordion-page-repeater-template  .fl_accordion-button[aria-expanded="true"] .accordion_icon {
+  transform: rotate(90deg);
+}
+.page-template-accordion-page-repeater-template  .fl_accordion-button .accordion_icon {
+  transition: transform var(--transition-duration) linear;
+}
+
+/* over writing above need to check on course accordion */
+.page-template-accordion-page-repeater-template .fl_accordion-button {
+  padding: 0;
+  text-align: left;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+.page-template-accordion-page-repeater-template .fl_accordion-button[aria-expanded="true"] {
+  background-color: transparent;
+  padding: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.page-template-accordion-page-repeater-template .fl_accordion h2{
+  padding-block-start: var(--section-block-spacing);
+  margin-block-end: 0;
+  text-align: left;
+}
+.page-template-accordion-page-repeater-template .fl_accordion h3{
+  border:none;
+}
+
+/* 
+ACCORDIONS FEES and FUNDING PAGE TEMPLATE
+*/
+/* 
+.accordions-fees-and-funding.container{
+  padding-left: 0;
+  padding-right: 0;
+}
+.accordions-fees-and-funding .fl_accordion h3{
+  border:none;
+}
+.accordions-fees-and-funding .fl_accordion h2{
+  padding-inline: 25px;
+  margin-block-start: var(--section-block-spacing);
+}
+.accordions-fees-and-funding .fl_accordion .fl_accordion-header{
+  padding-inline: 25px;
+}
+.accordions-fees-and-funding .fl_accordion .fl_accordion-body{
+  padding-inline: 25px;
+} */
+/* 
+@media screen and (min-width:768px) {
+  .accordions-fees-and-funding.container{
+    padding-left: unset;
+    padding-right: unset;
+  }
+  .accordions-fees-and-funding .fl_accordion h2{
+    padding-inline: unset;
+  }
+  .accordions-fees-and-funding .fl_accordion .fl_accordion-header{
+    padding-inline: unset;
+  }
+  .accordions-fees-and-funding .fl_accordion .fl_accordion-body{
+    padding-inline: unset;
+  }
+} */
+.accordions-fees-and-funding .fl_accordion h3{
+  border:none;
+}
+.accordions-fees-and-funding .fl_accordion h2{
+  margin-block-start: var(--section-block-spacing);
+}
+
+.page-fees-and-funding .accordion{
+  padding-block: var(--section-block-spacing);
+  max-width: var(--component-max-width-narrow);
+}
+.page-fees-and-funding .fl_accordion-item {
+  display: block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* padding-inline: 1rem; */
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  transition: padding-top var(--transition-duration) linear, padding-bottom var(--transition-duration) linear;
+}
+.page-fees-and-funding .fl_accordion-item p{
+  margin:1rem 0 0;
+}
+.page-fees-and-funding .fl_accordion-button {
+  padding: 0;
+  text-align: left;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+.page-fees-and-funding .fl_accordion-button[aria-expanded="true"] {
+  background-color: transparent;
+  padding: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.page-fees-and-funding .fl_accordion-body {
+  text-align: left;
+}
+.page-fees-and-funding .fl_accordion-body {
+  text-align: left;
+}
+.page-fees-and-funding .fl_accordion-body p:last-child{
+  margin-block-end: 0.5rem;
+}
+.page-fees-and-funding .fl_accordion-item::after {
+  all:unset;
+}
+.page-fees-and-funding .fl_accordion-button[aria-expanded="true"] .accordion_icon {
+  transform: rotate(90deg);
+}
+.page-fees-and-funding .fl_accordion-button .accordion_icon {
+  transition: transform var(--transition-duration) linear;
+}
+
+/* 
+SIMPLE ACCORDION
+*/
+.simple-accordion .accordion{
+  padding-block: var(--section-block-spacing);
+  max-width: var(--component-max-width-narrow);
+}
+.simple-accordion .fl_accordion-item {
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-inline: 1rem;
+  border-top: 1px solid var(--white);
+  transition: padding-top var(--transition-duration) linear, padding-bottom var(--transition-duration) linear;
+}
+.simple-accordion .fl_accordion-button[aria-expanded="true"] {
+  background-color: transparent;
+  padding: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.simple-accordion .fl_accordion-button.collapsed {
+  opacity: unset;
+}
+.simple-accordion .fl_accordion-button {
+  padding: 0;
+  text-align: left;
+  border: none;
+}
+.simple-accordion .fl_accordion-button {
+  display: flex;
+  justify-content: space-between;
+}
+.simple-accordion .fl_accordion-body {
+  text-align: left;
+}
+.simple-accordion .fl_accordion-item::after {
+  all:unset;
+}
+.simple-accordion  .fl_accordion-button[aria-expanded="true"] .accordion_icon {
+  transform: rotate(90deg);
+}
+.simple-accordion  .fl_accordion-button .accordion_icon {
+  transition: transform var(--transition-duration) linear;
+}

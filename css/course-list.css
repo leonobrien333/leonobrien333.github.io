@@ -1,0 +1,13 @@
+/* ==========================================================================
+COURSE LIST
+========================================================================== */
+
+.course-list{
+    display: flex;
+    flex-direction: column;
+    width:var(--component-max-width-narrow);
+    margin-inline: auto;
+  }
+.course-list button{
+    width:100%;
+  }

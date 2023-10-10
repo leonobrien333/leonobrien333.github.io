@@ -1,0 +1,92 @@
+
+.campaign-info-accordion h3.fl_accordion-header{
+    font-size: 0.8rem;
+  }
+.campaign-info-accordion .fl_accordion-button{
+    border:none;
+    border-radius: calc(var(--border-radius) - 10px);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.campaign-info-accordion .fl_accordion-button .accordion_icon{
+   display: none;
+}
+.campaign-info-accordion .fl_accordion-button[aria-expanded="true"]{
+    border:none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.campaign-info-accordion .fl_accordion-item{
+    border-style: solid;
+    border-color: var(--violet);
+    border-width: var(--border-width);
+    border-color: var(--violet);
+    border-radius: var(--border-radius);
+    overflow: visible;
+    margin-bottom: 20px;
+}
+.campaign-info-accordion .fl_accordion-item::after {
+    background: none;
+	/* background: linear-gradient(90deg, rgba(var(--line-color),0) 0px, rgba(var(--line-color),1) 0px, rgba(var(--line-color),1) 3px, rgba(var(--line-color),0) 3px);
+	background-position: 100% 0;
+	background-repeat: repeat-y;
+	background-size: 50%; */
+	height: 25px;
+	display: block;
+	content: '';
+	bottom: 0px;
+	position: relative;
+	margin-bottom: -25px;
+}
+.campaign-info-accordion .fl_accordion-item:last-of-type:after {
+	display: none;
+}
+.campaign-info-accordion .fl_accordion-body{
+    border:unset;
+    padding-inline:1rem;
+    text-align: left;
+}
+.campaign-info-accordion .fl_accordion-body p{
+    
+}
+.campaign-info-accordion .fl_accordion-body ul{
+    margin-block-start: 1rem;
+    padding-inline:0;
+    list-style: none;
+}
+.campaign-info-accordion .fl_accordion-body ul a{
+    display: inline-flex;
+    justify-content: center;
+    width:100%;
+
+    padding-block-start: 0.4em;
+    padding-block-end: 0.2em;
+    padding-inline: 1.5rem;
+    margin-block: 0.5rem;
+    margin-inline-end: 0.6em;
+
+    align-items: center;
+
+    color: var(--white);
+    text-decoration: none;
+
+        text-transform: uppercase;
+        font-family: var(--header-font);
+        font-size: .9rem;
+        background-color: transparent;
+
+        border-style: solid;
+        border-color: var(--white);
+        border-width: var(--btn-border-width);
+        border-radius: 9999px;
+
+        transition: all;
+        transition-duration: var(--transition-duration);
+        transition-timing-function: ease-in;
+}
+.campaign-info-accordion .fl_accordion-body ul a:hover{
+    color: var(--black);
+    background: var(--yellow);
+  border-color: var(--yellow);
+
+}

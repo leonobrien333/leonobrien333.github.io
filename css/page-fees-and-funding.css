@@ -1,0 +1,77 @@
+/* ==========================================================================
+FEES AND FUNDING PAGE
+========================================================================== */
+.page-fees-funding .tab-content .btn {
+    margin-block: 0.5rem;
+}
+.fees-and-funding .course-title{
+    font-family: unset;
+    font-weight: 400;
+    text-transform: none;
+}
+.fees-and-funding_manchester-with-aeb p::first-line, .fees-and-funding_manchester-without-aeb p::first-line{
+    font-family: var(--header-font);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: var(--header-font-letter-spacing);
+    text-transform: uppercase;
+}
+.fees-and-funding_manchester-19-24-with-ehcp-details{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);   
+    justify-content: center;
+    justify-items: stretch;
+    margin:auto; 
+    /* width: var(--component-max-width-narrow); */
+    width: 100%;
+}
+.fees-and-funding_manchester-19-24-with-ehcp-details span{
+    text-align: center;
+}
+
+.primary-tab-copy{
+    text-align: center;
+    padding-top: 2rem;
+}
+.page-fees-and-funding .tab-copy{
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.page-fees-and-funding .tab-copy h5{
+    background-color: purple;
+    border-bottom-left-radius: 1em;
+    width: fit-content;
+    padding: 0.1em 1em 0.1em 1.4em;
+    margin-inline: auto;
+    margin-block-end: 2rem;
+}
+
+.page-fees-and-funding .parallax-body{
+    text-align: center;
+  }
+
+.list-block {
+    margin: auto;
+    border-block: 1px solid var(--white);
+    padding-block: 2rem;
+  }
+
+  .list-block > *{
+    margin:auto;
+    max-width: 300px;
+  }
+
+.list-block h3{
+    text-align: start;
+}
+
+.fl_list-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sub-accordion-block{
+    margin-block: 3rem;
+  }

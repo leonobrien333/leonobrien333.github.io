@@ -1,0 +1,38 @@
+.youtube-embeds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  margin-block-start: calc(var(--section-block-spacing)/2);
+}
+
+@media (min-width: 768px) {
+  .youtube-embeds {
+    flex-direction: row;
+  }
+}
+
+.youtube-video {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.youtube-video_captions {
+  margin-top: 0.8em;
+  font-size: 1.2rem;
+  line-height: 1.2em;
+  height:fit-content;
+}
+
+.youtube-embeds iframe {
+  height: auto;
+  border: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: var(--border-radius);
+}

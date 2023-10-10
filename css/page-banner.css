@@ -1,0 +1,252 @@
+/* ==========================================================================
+  PAGE BANNER
+  ========================================================================== */
+  :not(div[class*="page-banner"]) > div[class*="page-banner"], .page-banner{
+    height: 560px;
+    display: flex;
+    flex-shrink:1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:sticky;
+    top:0;
+    /* z-index:-1; */
+  }
+
+  .home .page-banner{
+    height: 700px;
+  }
+  .home .component-outer-container.page-banner-outer-container, .home .component.page-banner{
+    height:700px;
+    margin-block-end: 0;
+    overflow: hidden;
+  }
+  @media (min-width: 768px)  {
+	  .home .component-outer-container.page-banner-outer-container, .home .component.page-banner{
+      height:700px;
+    }
+  }
+  
+  div[class*="page-banner"] > div[class*="page-banner"]{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    text-align:center;
+  }
+
+  .page-banner_surround{
+    position: relative;
+    width:100%;
+    max-width: var(--component-max-width-narrow);
+    height:100%;
+    margin-inline:auto;
+    margin-block:1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-banner .pathway-icon{
+    position: relative;
+    height: var(--icon-lg);
+    width: var(--icon-lg);
+    margin:auto;
+  }
+
+  .page-banner_icon{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+
+    width: 20px;
+    height: 20px;
+
+    padding-inline-start: 2px;
+    
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+
+    animation-duration: 800ms;
+    animation-name: banner-icon;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+ .page-banner_icon svg,  .page-banner_icon img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    fill:var(--white);
+  }
+
+  .page-banner_header {
+    margin:0.3em 0 0;
+  }
+  .page-banner_lead {
+    margin-block-end:1em;
+    font-family: var(--header-font);
+    letter-spacing: var(--header-font-letter-spacing);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: none;
+    text-align: center;
+    line-height: 1.15;
+  }
+  .single-courses .page-banner_lead {
+    text-transform: capitalize;
+  }
+  .page-banner_copy {
+    max-width: var(--component-max-width-narrow);
+    margin: auto;
+  }
+  .page-banner_animated-border {
+    position: relative;
+    padding-block-start:1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background:transparent;
+
+    border:var(--border-width) solid var(--white);
+    border-radius: 9999px;
+
+    /* width:fit-content; */
+    max-width:900px;
+    width:100%;
+    /*
+    have to use max-height hack to have smooth height transition.
+    https://css-tricks.com/using-css-transitions-auto-dimensions/
+    */
+    /* height:fit-content; */
+    height:100%;
+    max-height:800px;
+
+    animation-duration: 1s;
+    animation-name: banner-animated-border;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+    .page-banner_animated-border {
+      height:300px;
+    }
+
+  .page-banner_body {
+    position: relative;
+    opacity:0;
+    padding-inline: 1rem;
+    margin-inline: 2rem;
+
+    animation-duration: 300ms;
+    animation-name: banner-text;
+    animation-delay: 780ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+  @media screen and (max-width: 767px) {
+    :root{
+      --image-header-inline-padding: 2rem;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    :root{
+      --image-header-inline-padding: 4rem;
+    }
+  } 
+  div.page-banner_body:has(img) {
+    width:100%;
+    padding-inline: var(--image-header-inline-padding);
+  }
+  .page-banner_body img{
+    width:100%;
+  }
+ @media (max-width: 480px) {
+ .page-id-237 .page-banner_header{
+	 font-size: 1.2rem;
+ }
+}
+  @keyframes banner-icon {
+    from{
+      opacity:1;
+    }
+    29%{
+      opacity:1;
+    }
+    30%{
+      opacity:0;
+    }
+    39%{
+      opacity:0;
+    }
+    40%{
+      opacity:1;
+    }
+    49%{
+      opacity:1;
+    }
+    50%{
+      opacity:0;
+    }
+    to{
+      opacity:0;
+    }
+  }
+
+  @keyframes banner-text {
+    from{
+      opacity:0;
+      transform: translateY(15%);
+    }
+    to{
+      opacity:1;
+      transform: translateY(-0%);
+    }
+  }
+
+  /*
+  have to use max-height hack to have smooth height transition.
+  https://css-tricks.com/using-css-transitions-auto-dimensions/
+  */
+  @keyframes banner-animated-border {
+    from{
+      max-width:40px;
+      max-height:40px;
+      border-radius: 9999px;
+    }
+    50% {
+      max-width:40px;
+      max-height:40px;
+    }
+    80% {
+      max-width: 100%;
+      max-height:40px;
+      border-radius: 20px;
+    }
+    to {
+      border-radius: 20px;
+      max-width:100%;
+      max-height:100%;
+      max-width:100%;
+    }
+  }
+  
+#video-background {
+	min-width:100%;
+	min-height:100%;
+	width:100%;
+	height:auto;
+	z-index:-100;
+	position:absolute;
+	max-width: none;
+	display: block;
+    margin: 0 auto;
+    object-fit:cover;
+}
